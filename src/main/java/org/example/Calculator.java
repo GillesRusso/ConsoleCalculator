@@ -13,4 +13,7 @@ public class Calculator {
     public int produkt(int produkt1, int produkt2){
         return produkt1 * produkt2;
     }
+    public int division(int divisor,int divident){
+        return divisor/divident;
+    }
 }
