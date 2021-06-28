@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -7,14 +8,17 @@ import static org.junit.Assert.*;
 public class CalculatorTesting {
     Calculator calculator;
 
+    @Before
+    public void setup(){
+        calculator = new Calculator();
+    }
+
     @Test
     public void testSummeZweiPositiveIstOk(){
-        calculator = new Calculator();
         assertTrue(calculator.summe(10,20)== 30);
     }
     @Test
     public void testSubtractionZweiPositiveIsOk(){
-        calculator = new Calculator();
         assertTrue(calculator.subtraktion(20, 10)== 10);
     }
 }
