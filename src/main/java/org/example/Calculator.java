@@ -10,4 +10,7 @@ public class Calculator {
     public int reset(int null1, int null2){
         return 0;
     }
+    public int produkt(int produkt1, int produkt2){
+        return produkt1 * produkt2;
+    }
 }
