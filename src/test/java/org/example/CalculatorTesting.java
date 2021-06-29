@@ -23,6 +23,13 @@ public class CalculatorTesting {
         assertTrue(calculator.subtraktion(20, 10)== 10);
     }
     @Test
+    public void testDivisionZweiPositiveIsOk(){
+        assertTrue(calculator.division(10,10)==1);
+    }
+    @Test void testProduktZweiPositiveIsOk(){
+        assertTrue(calculator.produkt(10,10)==100);
+    }
+    @Test
     public void testMaxValueSumme(){
         assertFalse(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE)==1);
     }
