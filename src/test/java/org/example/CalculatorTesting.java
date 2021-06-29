@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class CalculatorTesting {
     Calculator calculator;
 
-    @Before
+      @Before
     public void setup(){
         calculator = new Calculator();
     }
@@ -70,5 +70,6 @@ public class CalculatorTesting {
     @After
     public void teardown(){
         calculator.reset(0,0);
+        System.out.println("Finished Testing");
     }
 }
