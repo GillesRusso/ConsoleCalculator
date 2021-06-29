@@ -1,10 +1,12 @@
 language: java
 script: mvn install
 deploy:
-  provider:
-    file:
-    secure:PuxLlYx6H16AnoDBqrEhlDOI7E+bTQF75p2NuoqPgZrVlPtP4WpYWHZZbFWPayzeSXy11iNiUXmF9O53G36p7EhEWwikeMLUxBwxXJwVqXxtYF13qKwQ4vMX5J7hDcYiUsTq6gOQvTGCrsqYoT5KkXFa5B2iZueOb11ZvnyCrSRzlgQOuor7DsMaD22e8lzg5Xlt8TjmtpWn8nzElAFmjjuaCuiFLhqskjEozxK2TgmAv3rd3ciEJEr4LKwbpIEKw3pZGU3YqG+X2E/w2SJo31/5h3g5Ip48GEo1ERU3F3F/cWBVbk3poHlaz1y5Dipj+lmfqRwL3fu64VePcNt7hRm2Lr+Q5nmzzNhyxzFkmUHn10VJW7c+zPE3CI9i/dNgr9lECOA+4AkYe6ylT3USwGe9zNlDkJjYx/K+W23UGNqkdj8VT0hF0QTEZwuh6GB8WT46l6qabEm/328oPjJDr6TxER5uBsrzmJW87PksmjShl08W8ueqViND08SjSS61uE9Iy0baQ7A+SRVmF/dATwL+ccIlwWnCunkvWhW81WuNW+RUaftJea4JCwj+51WmP6ibbxBE979oB/5GPTLlEtqNy6YiW+PIExpOX+Ssu29AKXD/ODwEWUirTKv5iaMEbsNo5BL44rRctBWfLwq/IgoJlYi20CqQ9PsVj2DjguM=
-    "/home/travis/.m2/repository/org/example/ConsoleCalculator/1.0-SNAPSHOT/ConsoleCalculator-1.0-SNAPSHOT.jar"
-    skip_cleanup: true
-    on: 
-        tags: true
+  provider: releases
+  api_key:
+    secure:
+    PuxLlYx6H16AnoDBqrEhlDOI7E+bTQF75p2NuoqPgZrVlPtP4WpYWHZZbFWPayzeSXy11iNiUXmF9O53G36p7EhEWwikeMLUxBwxXJwVqXxtYF13qKwQ4vMX5J7hDcYiUsTq6gOQvTGCrsqYoT5KkXFa5B2iZueOb11ZvnyCrSRzlgQOuor7DsMaD22e8lzg5Xlt8TjmtpWn8nzElAFmjjuaCuiFLhqskjEozxK2TgmAv3rd3ciEJEr4LKwbpIEKw3pZGU3YqG+X2E/w2SJo31/5h3g5Ip48GEo1ERU3F3F/cWBVbk3poHlaz1y5Dipj+lmfqRwL3fu64VePcNt7hRm2Lr+Q5nmzzNhyxzFkmUHn10VJW7c+zPE3CI9i/dNgr9lECOA+4AkYe6ylT3USwGe9zNlDkJjYx/K+W23UGNqkdj8VT0hF0QTEZwuh6GB8WT46l6qabEm/328oPjJDr6TxER5uBsrzmJW87PksmjShl08W8ueqViND08SjSS61uE9Iy0baQ7A+SRVmF/dATwL+ccIlwWnCunkvWhW81WuNW+RUaftJea4JCwj+51WmP6ibbxBE979oB/5GPTLlEtqNy6YiW+PIExpOX+Ssu29AKXD/ODwEWUirTKv5iaMEbsNo5BL44rRctBWfLwq/IgoJlYi20CqQ9PsVj2DjguM=
+file:
+"/home/travis/.m2/repository/org/example/ConsoleCalculator/1.0-SNAPSHOT/ConsoleCalculator-1.0-SNAPSHOT.jar"
+skip_cleanup: true
+on: 
+  tags: true
