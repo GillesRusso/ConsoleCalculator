@@ -39,7 +39,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainclass>com.company.example.App</mainclass>
+                <mainclass>main.java.org.example.App</mainclass>
               </manifest>
             </archive>
           </configuration>
