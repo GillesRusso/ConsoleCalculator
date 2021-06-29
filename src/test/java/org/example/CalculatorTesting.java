@@ -26,7 +26,8 @@ public class CalculatorTesting {
     public void testDivisionZweiPositiveIsOk(){
         assertTrue(calculator.division(10,10)==1);
     }
-    @Test void testProduktZweiPositiveIsOk(){
+    @Test
+    public void testProduktZweiPositiveIsOk(){
         assertTrue(calculator.produkt(10,10)==100);
     }
     @Test
@@ -36,6 +37,17 @@ public class CalculatorTesting {
     @Test
     public void testMinValueSubtraktion(){
         assertFalse(calculator.summe(Integer.MIN_VALUE, Integer.MIN_VALUE)==1);
+    }
+
+    @Test(expected=java.lang.AssertionError.class)
+    public void testIndexOutOfBoundsException() {
+        assertTrue(calculator.produkt(Integer.MAX_VALUE, Integer.MAX_VALUE)==Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void testAssertionError()
+            throws AssertionError {
+        assertTrue(calculator.produkt(Integer.MAX_VALUE, Integer.MAX_VALUE)==Integer.MAX_VALUE);
     }
 
     @After
