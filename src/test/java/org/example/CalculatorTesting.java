@@ -67,11 +67,6 @@ public class CalculatorTesting {
     public void testAssertionError1() {
         assertTrue(calculator.produkt(Integer.MAX_VALUE, Integer.MAX_VALUE)==Integer.MAX_VALUE);
     }
-    @Test(expected=java.lang.AssertionError.class)
-    public void testAssertionError() {
-        assertTrue(calculator.division(5, 0)==3);
-    }
-    
     @After
     public void teardown(){
         calculator.reset(0,0);
